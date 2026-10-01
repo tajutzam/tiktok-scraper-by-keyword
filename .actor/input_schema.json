@@ -1,0 +1,15 @@
+{
+    "title": "Tiktok Search Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Keyword",
+            "type": "string",
+            "description": "Query pencarian tiktok",
+            "editor": "textfield",
+            "prefill": "Kabur aja dulu"
+        }
+    },
+    "required": ["keyword"]
+}
