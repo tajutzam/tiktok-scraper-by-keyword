@@ -1,0 +1,38 @@
+{
+    "actorSpecification": 1,
+    "name": "tiktok-scraper-keywords",
+    "title": "TikTok Scraper Keywords",
+    "description": "Scrapes TikTok videos from search results by keyword (video content, likes, comments, shares, etc.)",
+    "version": "1.0.0",
+    "dockerfile": "../Dockerfile",
+    "meta": {
+        "maintainer": "tajutzam & kuhcokrow",
+        "keywords": ["tiktok", "social-media", "scraping", "keyword-search", "data-extraction"]
+    },
+    "input": {
+        "title": "TikTok Scraper Keywords input",
+        "type": "object",
+        "schemaVersion": 1,
+        "properties": {
+            "keyword": {
+                "title": "Keyword",
+                "type": "string",
+                "description": "Kata kunci pencarian video TikTok.",
+                "editor": "textfield"
+            },
+            "maxItems": {
+                "title": "Max items",
+                "type": "string",
+                "description": "Jumlah maksimum video yang ingin diambil.",
+                "editor": "textfield",
+                "default": "50"
+            }
+        },
+        "required": ["keyword"]
+    },
+    "defaultRunOptions": {
+        "memory": 4096,
+        "timeout": 7200,
+        "build": "latest"
+    }
+}

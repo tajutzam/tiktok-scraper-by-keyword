@@ -1,0 +1,30 @@
+{
+    "name": "TiktokScraperKeywords",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "description": "Scrapes TikTok videos by keyword search.",
+    "dependencies": {
+        "apify": "^3.7.2",
+        "crawlee": "^3.0.0",
+        "playwright": "1.62.1",
+        "playwright-extra": "^4.3.6",
+        "puppeteer-extra-plugin-stealth": "^2.11.2"
+    },
+    "devDependencies": {
+        "@apify/tsconfig": "^0.2.0",
+        "tsx": "^4.4.0",
+        "typescript": "~6.0.0",
+        "@types/node": "^24.0.0"
+    },
+    "scripts": {
+        "start": "npm run start:dev",
+        "start:prod": "node dist/main.js",
+        "start:dev": "tsx src/main.ts",
+        "build": "tsc",
+        "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1",
+        "postinstall": "npx crawlee install-playwright-browsers"
+    },
+    "author": "It's not you it's me",
+    "license": "ISC"
+}
